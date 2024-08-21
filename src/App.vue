@@ -1,7 +1,10 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-</script>
-
 <template>
-  <RouterView />
+  <MasterComponent>
+    <router-view></router-view>
+  </MasterComponent>
 </template>
+
+<script setup>
+import { RouterView } from 'vue-router'
+import MasterComponent from '@/components/MasterComponent.vue';
+</script>

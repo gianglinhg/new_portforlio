@@ -1,5 +1,5 @@
 <template>
   <div>
-    <h1 class="text-3xl">HOME</h1>
+    Trang FOOTER
   </div>
 </template>
