@@ -1,25 +1,26 @@
 <template>
   <div>
-    <div class="h-32 px-5 flex justify-between items-center relative">
-      <div class="flex flex-col md:flex-row items-start md:items-center gap-x-2">
+    <div class="relative flex items-center justify-between h-32 px-5">
+      <div class="flex flex-col items-start md:flex-row md:items-center gap-x-2">
         <div class="flex items-center gap-1">
           <span class="block w-4 h-4 bg-blue-ff"></span>
-          <h4 class="text-xl md:text-2xl font-semibold">Giang Văn Linh</h4>
+          <h4 class="text-xl font-semibold md:text-2xl">Giang Văn Linh</h4>
         </div>
         <span class="hidden md:inline-block">/</span>
         <h5 class="text-xl font-light">PHP Developer</h5>
       </div>
       <Transition name="slide-fade" mode="out-in">
-        <ul
-          class="w-full h-screen fixed top-0 left-0 justify-center items-center flex flex-col gap-3 bg-yellow-ce md:h-auto md:w-auto md:bg-opacity-0 md:flex-row md:static md:justify-end md:visible"
-          :class="{ 'invisible': !isShowMenu }" v-if="isShowMenu">
-          <li><a href="#" class="c-link">About me</a></li>
-          <li><a href="#" class="c-link">Resume</a></li>
-          <li><a href="#" class="c-link">Projects</a></li>
-          <li><a href="#" class="c-link">Contact</a></li>
-        </ul>
+        <ul class="fixed top-0 left-0 z-20 flex flex-col items-center justify-center w-full h-screen gap-3 bg-yellow-ce md:h-auto md:w-auto md:bg-opacity-0 md:flex-row md:static md:justify-end md:visible"
+        :class="{ 'invisible': !isShowMenu }" v-if="isShowMenu">
+        <router-link :to="{name: 'about'}">
+          <li><a href="#" class="c-link" :class="{ 'active': isActive('about') }">About me</a></li>
+        </router-link>
+        <router-link :to="{name: 'project'}">
+          <li><a href="#" class="c-link" :class="{ 'active': isActive('project') }">Projects</a></li>
+        </router-link>
+      </ul>
       </Transition>
-      <div class="cursor-pointer block md:hidden w-8 h-8 z-20" @click="isShowMenu = !isShowMenu">
+      <div class="z-20 block w-8 h-8 cursor-pointer md:hidden" @click="menuStore.toggleMenu()">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
           class="w-full h-full" :class="[isShowMenu ? 'text-black' : 'text-blue-ff']">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -30,19 +31,18 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
-const isShowMenu = ref(false);
+import { useMenu } from '@/stores/use-menu';
+import { RouterLink, useRoute } from 'vue-router';
 
-onMounted(() => {
-  window.addEventListener("resize", handleWindowSizeChange);
-  handleWindowSizeChange();
-});
-onUnmounted(() => {
-  window.removeEventListener("resize", handleWindowSizeChange);
-});
-const handleWindowSizeChange = () => {
-  isShowMenu.value = true;
+const menuStore = useMenu();
+const isShowMenu = menuStore.isShowMenu;
+
+const route = useRoute();
+
+const isActive = (name) => {
+  return route.name === name;
 };
+
 </script>
 
 <style scoped>

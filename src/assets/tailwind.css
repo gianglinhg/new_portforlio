@@ -7,6 +7,9 @@
     transform: transform 0.33s cubic-bezier(0.54, -0.81, 0.57, 0.57);
   }
   .c-link {
-    @apply uppercase font-bold text-xl hover:text-blue-ff transition ease-in md:font-light md:text-sm;
+    @apply text-xl font-bold uppercase transition ease-in hover:text-blue-ff md:font-light md:text-sm;
+  }
+  .active{
+    @apply text-blue-ff
   }
 }

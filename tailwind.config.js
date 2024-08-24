@@ -5,14 +5,21 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    colors: {
-      'blue-ff': '#0050ff',
-      'yellow-ce': '#e6dace',
-    },
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      height: {
+        custom: '700px',
+      },
+      padding: {
+        "40-c": "40rem",
+      },
+      colors: {
+      'blue-ff': '#0050ff',
+      'yellow-ce': '#e6dace',
+    },
+    },
   },
   plugins: [],
 }
