@@ -1,9 +1,7 @@
 <template>
-  <div class="w-screen p-3">
+  <div class="p-3">
     <HeaderComponent />
-    <div>
-      <slot />
-    </div>
+    <slot />
     <FooterComponent />
   </div>
 </template>

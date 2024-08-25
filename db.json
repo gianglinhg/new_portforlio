@@ -1,5 +1,38 @@
 {
   "skills": [],
-  "projects": [],
+  "projects": [
+    {
+      "name": "HRM system",
+      "role": "PHP developer",
+      "description": "Manage organization and data for approximately 2000 employees, including timekeeping, leave management, and reporting and payroll.",
+      "customer": "AlphaECC - Southern Petroleum Construction Joint Stock Company",
+      "image": "alpha.png",
+      "href": "https://hrm.alpha-ecc.com"
+    },
+    {
+      "name": "Movie website",
+      "role": "Fullstack Developer",
+      "description": "Develop a movie viewing platform with functions such as movie management, movie viewing, registration, login, movie crawler, statistics and email sending.",
+      "customer": "Personal project",
+      "image": "movie.png",
+      "href": "#"
+    },
+    {
+      "name": "Watches website",
+      "role": "PHP Developer",
+      "description": "Develop an e-commerce platform with functions such as purchasing, commenting, account management, registration, login, changing page layout and sending emails.",
+      "customer": "Graduation project",
+      "image": "swatch.png",
+      "href": "https://swatch.linhgv.name.vn/"
+    },
+    {
+      "name": "Clean food website",
+      "role": "PHP Developer",
+      "description": "Develop a website selling clean food with functions such as purchasing, commenting, registering, logging in and sending emails.",
+      "customer": "Subject project 1",
+      "image": "food.png",
+      "href": "#"
+    }
+  ],
   "infomation": {}
 }

@@ -4,7 +4,7 @@
       <div class="flex flex-col items-start md:flex-row md:items-center gap-x-2">
         <div class="flex items-center gap-1">
           <span class="block w-4 h-4 bg-blue-ff"></span>
-          <h4 class="text-xl font-semibold md:text-2xl">Giang Văn Linh</h4>
+          <h4 class="text-xl font-semibold md:text-2xl">Linh Giang</h4>
         </div>
         <span class="hidden md:inline-block">/</span>
         <h5 class="text-xl font-light">PHP Developer</h5>

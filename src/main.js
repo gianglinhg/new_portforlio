@@ -5,6 +5,7 @@ import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router'
+
 import '../static/fontawesome/css/all.min.css'
 
 const app = createApp(App)
