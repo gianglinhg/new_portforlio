@@ -1,0 +1,74 @@
+{
+  "skills": {
+    "main": ["Laravel", "Vuejs3", "MySQL", "Git", "Rest API", "HTML", "CSS", "Livewire"],
+    "short": [
+      "Teamwork skills",
+      "Analytical thinking and problem solving",
+      "Time management and multitasking",
+      "Ability to self-study and research"
+    ]
+  },
+  "experiences": [
+    {
+      "time": "06/2023 - 09/2024",
+      "role": "PHP Developer",
+      "company_name": "DIGITYZE ASIA CO.,LTD",
+      "description": [
+        "Developed and maintained web applications using Laravel and CodeIgniter, improving system performance by 80%.",
+        "Collaborated with a cross-functional team to design and implement a human resources management system, handling data for over 2000 employees.",
+        "Deployed efficient database queries with MySQL, reducing query response time by 20%."
+      ]
+    }
+  ],
+  "education": {
+    "time": "2020 - 2023",
+    "branch": "Website Programing",
+    "college": "FPT Polytechnic College",
+    "score": "7.9",
+    "description": "Complete a comprehensive curriculum that includes software engineering, algorithms, and data structures."
+  },
+  "projects": [
+    {
+      "name": "HRM system",
+      "role": "PHP developer",
+      "description": "Manage organization and data for approximately 2000 employees, including timekeeping, leave management, and reporting and payroll.",
+      "customer": "AlphaECC - Southern Petroleum Construction Joint Stock Company",
+      "image": "alpha.png",
+      "href": "https://hrm.alpha-ecc.com"
+    },
+    {
+      "name": "Movie website",
+      "role": "Fullstack Developer",
+      "description": "Develop a movie viewing platform with functions such as movie management, movie viewing, registration, login, movie crawler, statistics and email sending.",
+      "customer": "Personal project",
+      "image": "movie.png",
+      "href": "#"
+    },
+    {
+      "name": "Watches website",
+      "role": "PHP Developer",
+      "description": "Develop an e-commerce platform with functions such as purchasing, commenting, account management, registration, login, changing page layout and sending emails.",
+      "customer": "Graduation project",
+      "image": "swatch.png",
+      "href": "https://swatch.linhgv.name.vn/"
+    },
+    {
+      "name": "Clean food website",
+      "role": "PHP Developer",
+      "description": "Develop a website selling clean food with functions such as purchasing, commenting, registering, logging in and sending emails.",
+      "customer": "Subject project 1",
+      "image": "food.png",
+      "href": "#"
+    }
+  ],
+  "infomation": {
+    "cv_name": "Giang-Van-Linh-Junior-PHP.pdf",
+    "name": "Linh Giang",
+    "job": "PHP developer",
+    "phone": "0337229661",
+    "email": "linhbq89@gmail.com",
+    "topcv": "https://www.topcv.vn/xem-cv/VFQGVwYEV1UBWVEFAgMGCFEAUVIAW1pVUFdYUAc739",
+    "summary": "Experienced Fullstack Web Developer skilled in WordPress custom themes, Elementor, and various plugins. Proficient in JavaScript, VueJS, CSS, HTML, and PHP (including Laravel and CodeIgniter). Known for attention to detail and strong communication skills.",
+    "target_": "I look forward to joining your team to enhance my skills and contribute to complex web projects, optimizing the company's project performance"
+  }
+}
