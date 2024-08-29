@@ -1,12 +1,10 @@
 <template>
-  <div class="p-3">
-    <HeaderComponent />
-    <slot />
-    <FooterComponent />
-  </div>
+  <HeaderComponent />
+  <slot />
+  <FooterComponent />
 </template>
 
 <script setup>
-  import HeaderComponent from './HeaderComponent.vue'
-  import FooterComponent from './FooterComponent.vue'
+import HeaderComponent from './HeaderComponent.vue'
+import FooterComponent from './FooterComponent.vue'
 </script>

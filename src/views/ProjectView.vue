@@ -1,6 +1,6 @@
 <template>
   <div class="w-full h-full p-10 bg-yellow-ce">
-    <div class="w-2/3 mx-auto lg:w-1/3">
+    <div class="w-1/2 mx-auto">
       <div class="my-5">
         <div class="flex items-center justify-center gap-1 mb-7">
           <span class="block w-4 h-4 bg-blue-ff"></span>
@@ -22,11 +22,11 @@
                 <p class="font-medium">{{ project.role }}</p>
               </div>
             </div>
-            
+
             <p class="text-sm font-light">{{ project.description }}</p>
           </div>
           <div class="w-full h-full basis-5/12">
-            <img :src="'../../public/' + project.image" class="object-cover w-full h-full" :alt="project.image">
+            <img :src="'/images/' + project.image" class="object-cover w-full h-full" :alt="project.image">
           </div>
         </div>
       </div>
@@ -36,9 +36,9 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import axios from 'axios'
-  const projects = ref([]);
-  onMounted(() => {
-  axios.get('../db.json')
+const projects = ref([]);
+onMounted(() => {
+  axios.get('../json/db.json')
     .then((res) => {
       projects.value = res.data.projects;
     })

@@ -1,5 +1,32 @@
 {
-  "skills": [],
+  "skills": {
+    "main": ["Laravel", "Vuejs3", "MySQL", "Git", "Rest API", "HTML", "CSS", "Livewire"],
+    "short": [
+      "Teamwork skills",
+      "Analytical thinking and problem solving",
+      "Time management and multitasking",
+      "Ability to self-study and research"
+    ]
+  },
+  "experiences": [
+    {
+      "time": "06/2023 - 09/2024",
+      "role": "PHP Developer",
+      "company_name": "DIGITYZE ASIA CO.,LTD",
+      "description": [
+        "Developed and maintained web applications using Laravel and CodeIgniter, improving system performance by 80%.",
+        "Collaborated with a cross-functional team to design and implement a human resources management system, handling data for over 2000 employees.",
+        "Deployed efficient database queries with MySQL, reducing query response time by 20%."
+      ]
+    }
+  ],
+  "education": {
+    "time": "2020 - 2023",
+    "branch": "Website Programing",
+    "college": "FPT Polytechnic College",
+    "score": "7.9",
+    "description": "Complete a comprehensive curriculum that includes software engineering, algorithms, and data structures."
+  },
   "projects": [
     {
       "name": "HRM system",
@@ -34,5 +61,7 @@
       "href": "#"
     }
   ],
-  "infomation": {}
+  "infomation": {
+    "cv_href": "/src/assets/cv/Giang-Van-Linh-Junior-PHP.pdf"
+  }
 }
