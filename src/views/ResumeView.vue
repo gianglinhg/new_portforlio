@@ -12,12 +12,9 @@
           <h3 class="text-2xl font-semibold">Experience</h3>
           <Button @click="downloadCV()" :name="'Download CV'" />
         </div>
-        <div
-          class="flex px-8 py-20 bg-white"
-          v-for="experience in experiences"
-          :key="experience.id"
-        >
-          <div class="leading-10 basis-5/12">
+        <div class="flex flex-col gap-5 px-8 py-20 bg-white lg:flex-row" v-for="experience in experiences"
+          :key="experience.id">
+          <div class="flex-col leading-10 basis-5/12">
             <h4 class="text-xl font-semibold text-blue-ff">{{ experience.time }}</h4>
             <h4 class="font-light uppercase">{{ experience.role }}</h4>
             <p class="text-sm font-light">{{ experience.company_name }}</p>
@@ -34,7 +31,7 @@
         <div class="flex justify-between">
           <h3 class="text-2xl font-semibold">Education</h3>
         </div>
-        <div class="flex px-8 py-20 bg-white">
+        <div class="flex flex-col gap-5 px-8 py-20 bg-white lg:flex-row">
           <div class="leading-10 basis-5/12">
             <h4 class="text-2xl font-semibold text-blue-ff">{{ education.time }}</h4>
             <h4 class="font-light">{{ education.college }}</h4>
@@ -48,8 +45,8 @@
       </div>
       <div class="flex flex-col px-10 py-20 mb-5 space-y-20 bg-white">
         <div>
-          <h4 class="mb-5 text-2xl font-semibold">Professional skillset</h4>
-          <div class="grid grid-flow-col grid-rows-3 gap-4">
+          <h4 class="mb-5 text-2xl font-semibold">Skills</h4>
+          <div class="grid grid-flow-row grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             <div class="flex gap-1" v-for="main in skills.main" :key="main.id">
               <span class="block w-4 h-4 bg-blue-ff"></span>
               <h4 class="text-sm font-light">{{ main }}</h4>
@@ -57,7 +54,7 @@
           </div>
         </div>
         <div>
-          <h4 class="mb-5 text-2xl font-semibold">Professional skillset</h4>
+          <h4 class="mb-5 text-2xl font-semibold">Soft skills</h4>
           <div class="grid grid-rows-1 gap-4">
             <div class="flex gap-1" v-for="short in skills.short" :key="short.id">
               <span class="block w-4 h-4 bg-blue-ff"></span>
@@ -71,7 +68,7 @@
 </template>
 <script setup>
 import { onMounted, ref } from 'vue'
-import Button from '@/components/Button.vue'
+import Button from '@/components/ButtonComponent.vue'
 import axios from 'axios'
 
 const experiences = ref([])

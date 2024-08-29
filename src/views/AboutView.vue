@@ -5,15 +5,10 @@
       <div></div>
     </div>
     <div
-      class="absolute z-10 flex flex-col items-center w-3/4 gap-10 p-5 mt-3 space-x-5 transform -translate-x-1/2 -translate-y-1/2 bg-white shadow-lg justify-evenly md:w-1/2 md:flex-row left-1/2 top-1/2"
-    >
+      class="absolute z-10 flex flex-col items-center w-3/4 gap-10 p-5 mt-3 space-x-5 transform -translate-x-1/2 -translate-y-1/2 bg-white shadow-lg justify-evenly md:w-1/2 md:flex-row left-1/2 top-1/2">
       <div>
         <div class="w-32 h-32 mx-auto mb-3 md:h-60 md:w-60">
-          <img
-            src="/images/avatar.jpg"
-            alt="Avatar"
-            class="object-cover w-full h-full rounded-full"
-          />
+          <img src="/images/avatar.jpg" alt="Avatar" class="object-cover w-full h-full rounded-full" />
         </div>
         <div class="">
           <h1 class="w-1/2 mx-auto mb-3 text-2xl font-semibold text-center md:text-3xl">
@@ -23,10 +18,8 @@
           <p class="hidden mb-3 text-center uppercase md:block">{{ info.job }}</p>
           <div class="block mb-5 space-x-2 text-center md:hidden">
             <Button @click="openResume()" :name="'Resume'" />
-            <button
-              type="button"
-              class="px-5 py-1 transition-all bg-transparent border border-black rounded-full hover:border-blue-ff hover:bg-blue-ff hover:text-white"
-            >
+            <button type="button"
+              class="px-5 py-1 transition-all bg-transparent border border-black rounded-full hover:border-blue-ff hover:bg-blue-ff hover:text-white">
               Projects
             </button>
           </div>
@@ -39,10 +32,8 @@
         <div class="hidden mb-5 space-x-2 md:block">
           <Button @click="openResume()" :name="'Resume'" />
           <router-link :to="{ name: 'project' }">
-            <button
-              type="button"
-              class="px-5 py-1 transition-all bg-transparent border border-black rounded-full hover:border-blue-ff hover:bg-blue-ff hover:text-white"
-            >
+            <button type="button"
+              class="px-5 py-1 transition-all bg-transparent border border-black rounded-full hover:border-blue-ff hover:bg-blue-ff hover:text-white">
               Projects
             </button>
           </router-link>
@@ -57,10 +48,12 @@
 <script setup>
 import SocialComponent from '@/components/SocialComponent.vue'
 import { onMounted, ref } from 'vue'
-import Button from '@/components/Button.vue'
+import Button from '@/components/ButtonComponent.vue'
 import axios from 'axios'
+import { useRouter } from 'vue-router'
 
 const info = ref({})
+const router = useRouter();
 
 onMounted(() => {
   axios
@@ -72,7 +65,5 @@ onMounted(() => {
       console.error('Failed to fetch projects:', error)
     })
 })
-const openResume = () => {
-  window.open('https://www.topcv.vn/xem-cv/VFQGVwYEV1UBWVEFAgMGCFEAUVIAW1pVUFdYUAc739')
-}
+const openResume = () => router.push({ name: "resume" });
 </script>
