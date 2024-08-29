@@ -6,5 +6,5 @@
 
 <script setup>
 import { RouterView } from 'vue-router'
-import MasterComponent from '@/components/MasterComponent.vue';
+import MasterComponent from '@/components/MasterComponent.vue'
 </script>

@@ -26,7 +26,7 @@ const router = createRouter({
       path: '/resume',
       name: 'resume',
       component: ResumeView
-    },
+    }
   ]
 })
 

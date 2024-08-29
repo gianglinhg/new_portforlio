@@ -9,7 +9,7 @@
   .c-link {
     @apply text-xl font-bold uppercase transition ease-in hover:text-blue-ff md:font-light md:text-sm;
   }
-  .active{
-    @apply text-blue-ff
+  .active {
+    @apply text-blue-ff;
   }
 }

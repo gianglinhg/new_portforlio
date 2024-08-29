@@ -15,12 +15,12 @@
         </div>
         <div class="leading-7">
           <h5 class="font-medium text-center">Follow</h5>
-          <SocialComponent/>
+          <SocialComponent />
         </div>
       </div>
     </div>
   </div>
 </template>
 <script setup>
-  import SocialComponent from './SocialComponent.vue';
+import SocialComponent from './SocialComponent.vue'
 </script>

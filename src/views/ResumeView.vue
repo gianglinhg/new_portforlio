@@ -12,7 +12,11 @@
           <h3 class="text-2xl font-semibold">Experience</h3>
           <Button @click="downloadCV()" :name="'Download CV'" />
         </div>
-        <div class="flex px-8 py-20 bg-white" v-for="experience in experiences" :key="experience.id">
+        <div
+          class="flex px-8 py-20 bg-white"
+          v-for="experience in experiences"
+          :key="experience.id"
+        >
           <div class="leading-10 basis-5/12">
             <h4 class="text-xl font-semibold text-blue-ff">{{ experience.time }}</h4>
             <h4 class="font-light uppercase">{{ experience.role }}</h4>
@@ -66,27 +70,33 @@
   </div>
 </template>
 <script setup>
-import { onMounted, ref } from 'vue';
-import Button from '@/components/Button.vue';
+import { onMounted, ref } from 'vue'
+import Button from '@/components/Button.vue'
 import axios from 'axios'
-const experiences = ref([]);
-const education = ref({});
-const skills = ref({});
-const cv_link = ref('');
+
+const experiences = ref([])
+const education = ref({})
+const skills = ref({})
+const cv_name = ref('')
+
 onMounted(() => {
-  axios.get('../json/db.json')
+  axios
+    .get('../json/db.json')
     .then((res) => {
-      experiences.value = res.data.experiences;
-      education.value = res.data.education;
-      skills.value = res.data.skills;
-      cv_link.value = res.data.infomation.cv_href;
+      experiences.value = res.data.experiences
+      education.value = res.data.education
+      skills.value = res.data.skills
+      cv_name.value = res.data.infomation.cv_name
     })
     .catch((error) => {
-      console.error("Failed to fetch projects:", error);
-    });
-});
+      console.error('Failed to fetch:', error)
+    })
+})
 
 const downloadCV = () => {
-  location.href = cv_link.value;
-};
+  const link = document.createElement('a')
+  link.href = '/cv/' + cv_name.value
+  link.download = cv_name.value
+  link.click()
+}
 </script>

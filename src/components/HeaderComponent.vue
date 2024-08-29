@@ -12,25 +12,40 @@
       <Transition name="slide-fade" mode="out-in">
         <ul
           class="fixed top-0 left-0 z-20 flex flex-col items-center justify-center w-full h-screen gap-3 bg-yellow-ce md:h-auto md:w-auto md:bg-opacity-0 md:flex-row md:static md:justify-end md:visible"
-          :class="{ 'invisible': !isShowMenu }" v-if="isShowMenu">
+          :class="{ invisible: !isShowMenu }"
+          v-if="isShowMenu"
+        >
           <router-link :to="{ name: 'about' }">
-            <li><a href="#" class="c-link" :class="{ 'active': isActive('about') }">About me</a></li>
+            <li><a href="#" class="c-link" :class="{ active: isActive('about') }">About me</a></li>
           </router-link>
           <router-link :to="{ name: 'resume' }">
-            <li><a href="#" class="c-link" :class="{ 'active': isActive('resume') }">Resume</a></li>
+            <li><a href="#" class="c-link" :class="{ active: isActive('resume') }">Resume</a></li>
           </router-link>
           <router-link :to="{ name: 'project' }">
-            <li><a href="#" class="c-link" :class="{ 'active': isActive('project') }">Projects</a></li>
+            <li>
+              <a href="#" class="c-link" :class="{ active: isActive('project') }">Projects</a>
+            </li>
           </router-link>
           <router-link :to="{ name: 'contact' }">
-            <li><a href="#" class="c-link" :class="{ 'active': isActive('contact') }">Contact</a></li>
+            <li><a href="#" class="c-link" :class="{ active: isActive('contact') }">Contact</a></li>
           </router-link>
         </ul>
       </Transition>
       <div class="z-20 block w-8 h-8 cursor-pointer md:hidden" @click="menuStore.toggleMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="w-full h-full" :class="[isShowMenu ? 'text-black' : 'text-blue-ff']">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-full h-full"
+          :class="[isShowMenu ? 'text-black' : 'text-blue-ff']"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
         </svg>
       </div>
     </div>
@@ -38,18 +53,17 @@
 </template>
 
 <script setup>
-import { useMenu } from '@/stores/use-menu';
-import { RouterLink, useRoute } from 'vue-router';
+import { useMenu } from '@/stores/use-menu'
+import { RouterLink, useRoute } from 'vue-router'
 
-const menuStore = useMenu();
-const isShowMenu = menuStore.isShowMenu;
+const menuStore = useMenu()
+const isShowMenu = menuStore.isShowMenu
 
-const route = useRoute();
+const route = useRoute()
 
 const isActive = (name) => {
-  return route.name === name;
-};
-
+  return route.name === name
+}
 </script>
 
 <style scoped>
