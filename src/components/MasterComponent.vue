@@ -1,6 +1,8 @@
 <template>
   <HeaderComponent />
-  <slot />
+  <div class="">
+    <slot />
+  </div>
   <FooterComponent />
 </template>
 

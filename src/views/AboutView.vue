@@ -5,7 +5,7 @@
       <div></div>
     </div>
     <div
-      class="absolute z-10 flex flex-col items-center w-3/4 gap-10 p-5 mt-3 space-x-5 transform -translate-x-1/2 -translate-y-1/2 bg-white shadow-lg justify-evenly md:w-1/2 md:flex-row left-1/2 top-1/2">
+      class="absolute z-10 flex flex-col items-center w-3/4 gap-10 px-10 py-10 mt-3 space-x-5 transform -translate-x-1/2 -translate-y-1/2 bg-white shadow-lg md:py-20 justify-evenly md:w-1/2 md:flex-row left-1/2 top-1/2">
       <div>
         <div class="w-32 h-32 mx-auto mb-3 md:h-60 md:w-60">
           <img src="/images/avatar.jpg" alt="Avatar" class="object-cover w-full h-full rounded-full" />

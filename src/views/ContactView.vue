@@ -1,13 +1,12 @@
 <template>
-  <div class="w-full h-full p-10 bg-yellow-ce">
-    <div class="w-1/2 mx-auto">
+  <div class="w-full min-h-[65vh] lg:min-h-[80vh] p-5 md:p-5 lg:p-10 bg-yellow-ce">
+    <div class="w-1/2 mx-auto my-32">
       <div class="my-5">
         <div class="flex items-center justify-center gap-1 mb-7">
           <span class="block w-4 h-4 bg-blue-ff"></span>
           <h4 class="text-2xl font-semibold md:text-3xl">Let's talk</h4>
         </div>
       </div>
-      <div>
         <form @submit.prevent="sendMail()">
           <div class="grid gap-6 mb-6 md:grid-cols-2">
             <div>
@@ -97,7 +96,6 @@
           </button>
         </form>
       </div>
-    </div>
   </div>
 </template>
 <script setup>
